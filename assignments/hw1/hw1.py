@@ -37,7 +37,7 @@ def coffee():
     shipping_cost = .86
     fixed_cost = 1.50
     product = eval(input("How many pounds of coffee would you like?"))
-    total = product * coffee_cost + shipping_cost * 2 + fixed_cost
+    total = product * coffee_cost + shipping_cost * product + fixed_cost
     print("You're total is:", total)
 
 
