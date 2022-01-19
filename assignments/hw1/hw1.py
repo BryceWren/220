@@ -50,5 +50,5 @@ def kilometers_to_miles():
     print("That's", miles_traveled, "miles")
 
 
-if BryceWren == '__main__':
+if __name__ == '__main__':
     pass
