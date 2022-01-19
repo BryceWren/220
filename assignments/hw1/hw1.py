@@ -2,7 +2,9 @@
 Name: <Bryce Wren>
 <ProgramName>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <The problem asks if for the code to ask for user input,
+ turning their input into an integer
+spitting out a solution to the problem using different arithmatic.>
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work
