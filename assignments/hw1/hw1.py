@@ -3,7 +3,7 @@ Name: <Bryce Wren>
 <ProgramName>.py
 
 Problem: <The problem asks if for the code to ask for user input,
- turning their input into an integer
+turning their input into an integer
 spitting out a solution to the problem using different arithmatic.>
 
 Certification of Authenticity:
