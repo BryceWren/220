@@ -1,13 +1,12 @@
 """
-Name: <your name goes here – first and last>
+Name: <Bryce Wren>
 <ProgramName>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <Making for loops and (math.) functions in order to get functions to create solutions for problems>
 
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 import math
 
@@ -28,11 +27,11 @@ def multiplication_table():
         print()
 
 def triangle_area():
-    a = eval(input('Enter side a length:'))
-    b = eval(input('Enter side b length:'))
-    c = eval(input('Enter side c length:'))
-    s = (a + b + c)/2
-    area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+    variable_a = eval(input('Enter side a length:'))
+    variable_b = eval(input('Enter side b length:'))
+    variable_c = eval(input('Enter side c length:'))
+    s = (variable_a + variable_b + variable_c)/2
+    area = math.sqrt(s*(s-variable_a)*(s-variable_b)*(s-variable_c))
     print('area is:',area)
 
 
