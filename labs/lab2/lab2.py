@@ -8,7 +8,7 @@ def average():
         num = eval(input("Enter number:"))
         rms = rms + num**2
         har_mean_a = har_mean_a + 1/num
-        geo_mean_a = (geo_mean_a * num)
+        geo_mean_a = geo_mean_a * num
     final_value = math.sqrt(rms / values)
     har_mean_b = values / (har_mean_a)
     geo_mean_b = geo_mean_a**(1/values)
