@@ -13,7 +13,6 @@ def squares():
     click_text.draw(window)
     window.getMouse()
 
-squares()
 
 def rectangle():
     window = GraphWin("Rectangle", 700, 700)
@@ -25,8 +24,6 @@ def rectangle():
     y2 = rec_point2.getY()
     x = rec_point1.getX()
     x2 = rec_point2.getX()
-    print(x, y)
-    print(x2, y2)
     height = abs(y2 - y)
     length = abs(x - x2)
     perimeter = "perimeter:", height * 2 + length * 2
@@ -34,13 +31,11 @@ def rectangle():
     p_text = Text(Point(350, 625), perimeter)
     a_text = Text(Point(350, 650), area)
     a_text.draw(window)
-    p_text.getAnchor()
     p_text.draw(window)
     arectangle.draw(window)
     click_text = Text(Point(350, 50), "Click again to close")
     click_text.draw(window)
     window.getMouse()
-rectangle()
 
 def circle():
     win = GraphWin("Circle", 700, 700)
@@ -60,7 +55,7 @@ def circle():
     click_text = Text(Point(350,650), "click to close!")
     click_text.draw(win)
     win.getMouse()
-circle()
+
 
 def pi2():
     user = eval(input("how many terms to sum?"))
@@ -78,4 +73,4 @@ def pi2():
     print("accuracy:", abs(accuracy))
     print(denom)
 
-pi2()
+

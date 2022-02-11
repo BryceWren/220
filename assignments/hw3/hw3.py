@@ -40,7 +40,7 @@ def newton():
 
 
 def sequence():
-    term = eval(input("how many terms would you like?"))
+    term = eval(input("how many terms would you like?")) # reapeating numbers mean to mod something like 113355
     for i in range(1, term + 1):
         num = (i % 2) + i - 1
         print(num, end=" ")
