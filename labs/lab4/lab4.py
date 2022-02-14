@@ -26,10 +26,10 @@ def valentines():
     h_triangle.setOutline("Red")
     h_triangle.draw(win)
     text_v.draw(win)
-    for i in range(15):
+    for i in range(17):
         a_triangle.move(10, 0)
         r_rectangle.move(10, 0)
-        time.sleep(.5)
+        time.sleep(.25)
     close_text = Text(Point(250,475),"Click to Close!")
     close_text.draw(win)
     win.getMouse()
