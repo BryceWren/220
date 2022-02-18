@@ -72,8 +72,8 @@ def pig_latin():
     user = str(input("enter a sentence to convert to pig latin:"))
     sentence_split = user.split()
     for i in sentence_split:
-        word = i[1:] + i[0] + "ay"
-        print(word, end=" ")
+        word = (i[1:] + i[0] + "ay")
+        print(word.lower(), end=" ")
 
 #pig_latin()
 
