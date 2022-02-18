@@ -37,10 +37,10 @@ def names():
         niel = lip[i].split()
         niel_0 = niel[0]
         niel_1 = niel[1]
-        x = num + niel_0[0]
-        y = num + niel_1[0]
-        sick = (x.strip()+y.strip())
-        print(sick.upper().strip(), end="\t")
+        inside_string_1 = num + niel_0[0]
+        inside_string_2 = num + niel_1[0]
+        final = (inside_string_1.strip()+inside_string_2.strip())
+        print(final.strip(), end="\t")
 
 #names()
 
@@ -52,7 +52,7 @@ def thirds():
         x = sentence[0::3]
         (stuff.append(x))
     for item in stuff:
-        print(item.capitalize())
+        print(item)
 
 #thirds()
 

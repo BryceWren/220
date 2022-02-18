@@ -9,7 +9,7 @@ def squares():
         rectangle = Rectangle(cornerPointa, cornerPointb)
         rectangle.draw(window)
         rectangle.setFill("red")
-    click_text = Text(Point(350,350), "Click again to close")
+    click_text = Text(Point(350, 350), "Click again to close")
     click_text.draw(window)
     window.getMouse()
 
