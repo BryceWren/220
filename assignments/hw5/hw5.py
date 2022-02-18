@@ -18,14 +18,13 @@ def initials():
     students = eval(input("how many students are in the class?"))
     num = ' '
     for i in range(1, students + 1):
-        #print("what is the name of student", i)
         name = input("what is the name of student {}".format(i))
         x = name.split()
         extra = x[0]
         first_i = extra[0]
         simple = num + x[1]
         last_i = simple[1]
-        print(first_i.upper() + last_i.upper())
+        print(first_i + last_i)
 
 #initials()
 
@@ -49,8 +48,8 @@ def thirds():
     n_sentences = eval(input("enter the number of sentences:"))
     stuff = []
     for i in range(1, n_sentences + 1):
-        print("enter sentence", i, ":")
-        sentence = input()
+        #print("enter sentence {} :".format(i))
+        sentence = input("enter sentence {} :".format(i))
         x = sentence[0::3]
         (stuff.append(x))
     for item in stuff:
@@ -75,7 +74,7 @@ def pig_latin():
     sentence_split = user.split()
     for i in sentence_split:
         word = i[1:] + i[0] + "ay"
-        print(word.lower(), end=" ")
+        print(word, end=" ")
 
 #pig_latin()
 
