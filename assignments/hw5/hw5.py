@@ -48,7 +48,6 @@ def thirds():
     n_sentences = eval(input("enter the number of sentences:"))
     stuff = []
     for i in range(1, n_sentences + 1):
-        #print("enter sentence {} :".format(i))
         sentence = input("enter sentence {} :".format(i))
         x = sentence[0::3]
         (stuff.append(x))
