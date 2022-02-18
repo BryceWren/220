@@ -1,80 +1,114 @@
-def name_reverse():
-    name = input("What is your name (first last)")
-    x = name.split()
-    l_name = x[1]
-    f_name = x[0]
-    print(l_name.rstrip() + ",", f_name.rstrip())
+"""
+Name: <your name goes here – first and last>
+<ProgramName>.py
 
-#name_reverse()
+Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+
+Certification of Authenticity:
+<include one of the following>
+I certify that this assignment is entirely my own work.
+I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+"""
+
+from graphics import *
+
+
+def squares():
+    # Creates a graphical window
+    width = 400
+    height = 400
+    win = GraphWin("Clicks", width, height)
+
+    # number of times user can move circle
+    num_clicks = 5
+
+    # create a space to instruct user
+    inst_pt = Point(width / 2, height - 10)
+    instructions = Text(inst_pt, "Click to move circle")
+    instructions.draw(win)
+
+    # builds a circle
+    shape = Circle(Point(50, 50), 20)
+    shape.setOutline("red")
+    shape.setFill("red")
+    shape.draw(win)
+
+    # allows the user to click multiple times to move the circle
+    for i in range(num_clicks):
+        click = win.getMouse()
+        center = shape.getCenter()  # center of circle
+
+        # move amount is distance from center of circle to the
+        # point where the user clicked
+        change_x = click.getX() - center.getX()
+        change_y = click.getY() - center.getY()
+        shape.move(change_x, change_y)
+
+    win.getMouse()
+    win.close()
+
+
+def rectangle():
+    pass
+
+
+def circle():
+    pass
+
+
+def pi2():
+    pass
+
+
+if __name__ == '__main__':
+    pass
+"""
+Name: <your name goes here – first and last>
+<ProgramName>.py
+
+Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+
+Certification of Authenticity:
+<include one of the following>
+I certify that this assignment is entirely my own work.
+I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+"""
+
+
+def name_reverse():
+    pass
+
 
 def company_name():
-    domain = input("enter a domain:")
-    x = domain.split(".")
-    company = x[1]
-    print(company)
-#company_name()
+    pass
+
 
 def initials():
-    students = eval(input("how many students are in the class?"))
-    num = ' '
-    for i in range(1, students + 1):
-        print("what is the name of student", i)
-        name = input()
-        x = name.split()
-        extra = x[0]
-        first_i = extra[0]
-        simple = num + x[1]
-        last_i = simple[1]
-        print(first_i.upper() + last_i.upper())
+    pass
 
-#initials()
 
 def names():
-    user = input("enter a list of names:")
-    lip = user.split(",")
-    lips = len(lip) - 1
-    num = " "
-    for i in range(0, lips + 1):
-        niel = lip[i].split()
-        niel_0 = niel[0]
-        niel_1 = niel[1]
-        x = num + niel_0[0]
-        y = num + niel_1[0]
-        sick = (x.strip()+y.strip())
-        print(sick.upper().strip(), end="\t")
+    pass
 
-#names()
 
 def thirds():
-    n_sentences = eval(input("enter the number of sentences:"))
-    stuff = []
-    for i in range(1, n_sentences + 1):
-        print("enter sentence", i, ":")
-        sentence = input()
-        x = sentence[0::3]
-        (stuff.append(x))
-    for item in stuff:
-        print(item.capitalize())
+    pass
 
-#thirds()
 
 def word_average():
-    sentence = input("enter a sentence:")
-    words = sentence.split()
-    count = len(words) - 1
-    num = sentence[0:]
-    nums = len(num) - count
-    average = nums / len(words)
-    print(average)
+    pass
 
-
-#word_average()
 
 def pig_latin():
-    user = str(input("enter a sentence to convert to pig latin:"))
-    sentence_split = user.split()
-    for i in sentence_split:
-        word = i[1:] + i[0] + "ay"
-        print(word.lower(), end=" ")
+    pass
 
-#pig_latin()
+
+if __name__ == '__main__':
+    # name_reverse()
+    # company_name()
+    # initials()
+    # names()
+    # thirds()
+    # word_average()
+    # pig_latin()
+    pass
