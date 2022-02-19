@@ -87,7 +87,7 @@ def pig_latin():
         word = (i[1:] + i[0] + "ay")
         print(word.lower(), end=" ")
 # Output works on its own but doesn't work going through the test file
-pig_latin()
+#pig_latin()
 
 if __name__ == '__main__':
     pass
