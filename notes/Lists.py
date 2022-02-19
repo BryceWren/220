@@ -103,7 +103,7 @@ index = months_num - 1
 simple = months[index]
 print("that is", + simple)
 
-months - ["january", "febuary"]
+months = ["january", "febuary"]
 months = months + ["March"]
 months.append("May")
 
@@ -125,7 +125,7 @@ a = "it's a small world after all"
 a.capitalize()
 print(a) # capitilizes the first letter in the string
 a.title()
-# capitilizes the first letter in each world
+# capitilizes the first letter in each word
 a.count("after") # how many times a pattern is in the string
 a.find("all") # finds the index number from left to right
 a.rfind("all") # finds the index number from right to left
@@ -141,7 +141,8 @@ a.ljust(50)
 #left justified
 a.rjust(50)
 #right justified
-a.lstrip() # takes away spaces
+a.lstrip() # takes away spaces on left
+a.rstrip() # takes away spaces on right
 a.split('') # returns a list of strings
 my_split = a.split()
 my_join = ' '.join(my_split)
@@ -151,6 +152,93 @@ my_join
 
 #string get stored in memory
 # encoding takes letters converts them to numbers and stores them as a binary value
-# "a" -> 65
-# "b" -> 66
+# "A" -> 65
+# "B" -> 66
 # python uses unicode is a list of mappings
+
+#ord("string") # ----> returns an integer
+#ord("A") --> 65
+#chr(65) ----> "A"
+#str() ---> converts an integer to a string
+
+def encode():
+    word = input("enter a word:")
+    nums = ""
+    for letter in word: #loop through any sequence
+        num = ord(letter)
+        nums = nums + str(num) + " "
+    print(nums.rstrip())
+
+
+encode()
+
+def decode():
+    nums = input("enter unicode values")
+    word = ""
+    for number in nums.split():
+        letter = chr(int(number))
+        word = word + letter
+        print(word)
+
+
+    #encryption
+    # when you are trying to hide something
+    # add a secret is called a "key" for example adding 7 to each output
+    #ENTER USER 1:
+    #ENTER USER 2:
+    for i in range(10):
+        print("enter user", i)
+        input() #wrong
+
+    for i in range(10):
+        print()
+        input("enter user" + str(i))
+
+    for i in range(10):
+        input("enter user",{}.format(i))
+        input("enter user" + str(i)) #either of these methods work
+
+    "my name is {} and I am {} years old".format('Eric', 7)
+    "my name is {} and I am {} years old".format("eric", 7)
+    #{:10} the 10 is the width
+    #{:^10} is putting the what ever is specified in the format in the center
+    #{:*^10}---> fill, allign, width
+    # ^ --->is centered
+    # < ----> left
+    # > ----> this is to the right
+    dollars = 12
+    cents = 7
+    print("i have ${}.{}".format(dollars, cents))
+    print("i have ${}.{:0>2}".format(dollars, cents))
+    money = 12.70
+    print("I have ${}".format(money))
+    #prints 12.7
+    money = 12.70
+    print("i have ${:.2f}".format(money)) #.2f tells me how many decimal spaces i want in this case i want two
+
+# FILES
+#open(<filename>,<mode>) 2 strings
+# a mode is "r" or "w"
+# "r" stands for read "w" stands for write
+def print_file():
+    my_file = open('Homework test.py', 'r')
+    poem = my_file.read() # data type is string
+    peom = poem.replace("s", "$") # this replaces all s's with $
+    print(poem)
+    my_file.close()
+    #.read() -> str
+    #.readline() -> str /n #/n is including the new line character
+    #.readlines() -> list[str]
+def print_file_lines():
+    poem_file = open('Homework test.py', 'r')
+    for i in range(5):
+        line = poem_file.readline()
+        print(line, end='')
+        #print(line[:-1])
+def print_file_list():
+    poem_file = open("Homework test.py","r")
+    for line in poem_file.readlines():
+        print(line[:-1]) # the splice stops it from printing the new line as its own line
+
+output_file = open('output.txt', 'w') # COULD NUKE FILE IF WRONG FILE NAME IS PLACED
+print("hello world!", file=output_file) # BEWARE THIS COULD RESULT IN DATA LOSS

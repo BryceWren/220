@@ -21,4 +21,4 @@ def test():
     print("pi approximation:", approx_pi)
     print("accuracy:", accuracy)
 
-test()
+#test()
