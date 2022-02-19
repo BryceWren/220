@@ -1,3 +1,15 @@
+
+"""
+Name: <Bryce Wren>
+<ProgramName>.py
+
+Problem: <using lists and slicing to solve problems>
+
+Certification of Authenticity:
+<include one of the following>
+I certify that this assignment is entirely my own work.
+"""
+
 def name_reverse():
     name = input("What is your name (first last)")
     x = name.split()
@@ -74,8 +86,8 @@ def pig_latin():
     for i in sentence_split:
         word = (i[1:] + i[0] + "ay")
         print(word.lower(), end=" ")
-
-#pig_latin()
+# Output works on its own but doesn't work going through the test file
+pig_latin()
 
 if __name__ == '__main__':
     pass
