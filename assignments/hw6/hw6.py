@@ -1,24 +1,31 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: <Bryce Wren>
+<hw6>.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
 
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
 def cash_converter():
-    pass
-
+    money = eval(input("enter an integer:"))
+    money_final = ("that is ${:.2f}".format(money))
+    print(money_final)
 
 def encode():
-    pass
+    user = (input("enter a message:"))
+    message = str(user.split())
+    #key = eval(input("enter a key:"))
+    word = ""
+    for number in message.split():
+        letter = ord(number[0])
+        word = word + str(letter) + " "
+    print(word.rstrip())
 
-
+encode()
 def sphere_area(radius):
     pass
 

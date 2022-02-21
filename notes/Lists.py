@@ -16,13 +16,12 @@ list = [1, 2, 3]
 t = "hi" + "john"
 print(t)
 
-["ma", "bone"] + ["sell", "structure"]
-["ma", "bone", "sell", "structure"]
+#["ma", "bone", "sell", "structure"]
 
 # when a list has diffeernt data types it such as a string + int = a list as its data type
 
 c = "hi"
-d = c * 2
+#d = c * 2
 # print will be "hihi"
 e = ["mon", "tues"] * 2
 # print e = [mon tues mon tues]
@@ -53,7 +52,7 @@ for name in b:
 # index is the (length of sequence - 1)
 # b[0] = how I get paul out of list b
 
-c = [1, 2, "hi", 4][2]
+#c = [1, 2, "hi", 4][2]
 #1 2 3 4
 #-4 -3 -2 -1
 d = c + 3
@@ -62,7 +61,7 @@ print(d)
 # substring = group of letters in a string
 # subint = group of integers in a list
 # slicing =
-a[0: 5]
+#a[0: 5]
 # similar to range
 # data type is a string
 # when slicing lists it always returns a list
@@ -79,12 +78,12 @@ for i in range(100):
 
 # any # % 9 -> whatever x is -1 exp. 9-1 so mod will go through 0-8
 
-f_name = (input("enter first name"))
-l_name = (input("enter last name"))
-f_name[0]
-l_name[0:7]
-username = f_name + l_name
-print(username)
+#f_name = (input("enter first name"))
+#l_name = (input("enter last name"))
+#f_name[0]
+#l_name[0:7]
+#username = f_name + l_name
+#print(username)
 
 
 #group of characters you do slicing
@@ -166,7 +165,7 @@ def encode():
     nums = ""
     for letter in word: #loop through any sequence
         num = ord(letter)
-        nums = nums + str(num) + " "
+        nums = nums + num + " "
     print(nums.rstrip())
 
 
@@ -195,7 +194,7 @@ def decode():
         input("enter user" + str(i))
 
     for i in range(10):
-        input("enter user",{}.format(i))
+        input("enter user {}".format(i))
         input("enter user" + str(i)) #either of these methods work
 
     "my name is {} and I am {} years old".format('Eric', 7)
