@@ -129,19 +129,24 @@ def process_list():
     print(x)
     x = values[1] * 5
     print(x)
-    x = values[2] + values[3] + str(pt)
+    x = values[2], values[3], str(pt)
     print(x)
-    x = values[0] + values[2], int(values[-1])
+    x = values[2], values[3], values[0]
     print(x)
-    x = values[0] + values[2] + int(values[-1])
+    x = values[2], values[0], float(values[-1])
+    print(x)
+    x = float(values[0]) + float(values[2]) + float(values[-1])
     print(x)
     x = len(values)
     print(x)
 
-process_list()
+#process_list()
 def another_series():
-    pass
+    inputs = eval(input("how many terms?"))
+    for i in range(inputs):
+        seq = (i % 3) * 2 + 2
+        print(seq)
 
-
+another_series()
 def target():
     pass
