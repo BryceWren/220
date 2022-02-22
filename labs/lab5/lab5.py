@@ -147,6 +147,6 @@ def another_series():
         seq = (i % 3) * 2 + 2
         print(seq)
 
-another_series()
+#another_series()
 def target():
     pass
