@@ -133,7 +133,7 @@ def process_list():
     print(x)
     x = list((str(values[2]), values[3], "{}".format(values[0])))
     print(x)
-    x = (str(values[2]), "{}".format(values[0]), str(float(values[5])))
+    x = list(str(values[2]), "{}".format(values[0]), str(float(values[5])))
     print(x)
     x = float(values[0]) + float(values[2]) + float(values[-1])
     print(x)
