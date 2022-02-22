@@ -143,10 +143,26 @@ def process_list():
 #process_list()
 def another_series():
     inputs = eval(input("how many terms?"))
+    num = 0
     for i in range(inputs):
         seq = (i % 3) * 2 + 2
-        print(seq)
-
+        num = num + seq
+        print(seq, end="\t")
+    print("\n""sum = {}".format(num).center(10))
 #another_series()
 def target():
-    pass
+    color = ["Yellow", "Red", "Blue", "Black", "White"]
+    rad = [225, 175, 125, 75, 25]
+    win = GraphWin("target", 500, 500)
+    num = 0
+    for r in (rad):
+        aCircle = Circle(Point(250, 250), r)
+        aCircle.setFill(color[num])
+        aCircle.draw(win)
+        num += 1
+
+    finish_text = Text(Point(250, 10), "Click to Close!")
+    finish_text.draw(win)
+    win.getMouse()
+
+target()
