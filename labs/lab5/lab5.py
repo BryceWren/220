@@ -151,7 +151,7 @@ def another_series():
     print("\n""sum = {}".format(num).center(10))
 #another_series()
 def target():
-    color = ["Yellow", "Red", "Blue", "Black", "White"]
+    color = ["White", "Black", "Blue", "Red", "Yellow"]
     rad = [225, 175, 125, 75, 25]
     win = GraphWin("target", 500, 500)
     num = 0
