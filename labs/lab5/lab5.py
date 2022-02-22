@@ -108,7 +108,7 @@ def color_shape():
     win.getMouse()
     win.close()
 
-#olor_shape()
+#color_shape()
 def process_string():
     x = input("input a string")
     print(x[0])
@@ -119,7 +119,7 @@ def process_string():
     for i in x:
         print(i)
     print(len(x))
-
+#process_string()
 def process_list():
     pt = Point(5, 10)
     values = [5, "hi", 2.5, "there", pt, "7.2"]
@@ -129,18 +129,18 @@ def process_list():
     print(x)
     x = values[1] * 5
     print(x)
-    x = values[2], values[3], str(pt)
+    x = list((str(values[2]), values[3], "{}".format(pt)))
     print(x)
-    x = values[2], values[3], values[0]
+    x = list((str(values[2]), values[3], "{}".format(values[0])))
     print(x)
-    x = values[2], values[0], float(values[-1])
+    x = (str(values[2]), "{}".format(values[0]), str(float(values[5])))
     print(x)
     x = float(values[0]) + float(values[2]) + float(values[-1])
     print(x)
     x = len(values)
     print(x)
 
-#process_list()
+process_list()
 def another_series():
     inputs = eval(input("how many terms?"))
     num = 0
@@ -165,4 +165,4 @@ def target():
     finish_text.draw(win)
     win.getMouse()
 
-target()
+#target()
