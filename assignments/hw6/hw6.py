@@ -2,13 +2,14 @@
 Name: <Bryce Wren>
 <hw6>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <using strings to write encryptions as well as developing functions>
 
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is entirely my own work.
 """
 
+import math
 
 def cash_converter():
     money = eval(input("enter an integer:"))
@@ -16,34 +17,56 @@ def cash_converter():
     print(money_final)
 
 def encode():
-    user = (input("enter a message:"))
-    message = str(user.split())
-    #key = eval(input("enter a key:"))
-    word = ""
-    for number in message.split():
-        letter = ord(number[0])
-        word = word + str(letter) + " "
-    print(word.rstrip())
+    user = str(input("enter a message:"))
+    key = eval(input("enter a key:"))
+    encoded_string = ""
+    for character in user: #"enter that string"
+        code_character = (ord(character) + key)
+        # takes a string character by character then gives a number and adds key to it
+        enc_let = (chr(code_character))
+        # converts the unicode from an integer to a chracter
+        encoded_string = encoded_string + enc_let
+    print(encoded_string)
 
-encode()
+
 def sphere_area(radius):
-    pass
+    area = 4 * math.pi * radius**2
+    return area
 
 
 def sphere_volume(radius):
-    pass
+    volume = (4/3) * math.pi * radius**3
+    return volume
 
 
 def sum_n(number):
-    pass
-
+    initiator = 0
+    for i in range(1, number + 1):
+        initiator = initiator + i
+    return initiator
 
 def sum_n_cubes(number):
-    pass
-
+    initiator = 0
+    for i in range(1, number + 1):
+        initiator = initiator + i**3
+    return initiator
 
 def encode_better():
-    pass
+    user = input("enter a message:")
+    key = input("enter a key:")
+    encoded_string = ""
+    for number in range(len(user)):
+        code_character = ord(user[number]) - 65
+        index_key = (number % len(key))
+        key_string = key[index_key]
+        key_number = ord(key_string) - 65
+        difference_value = (code_character + key_number) % 58
+        value_letter = difference_value + 65
+        encoded_string = encoded_string + chr(value_letter)
+    print(encoded_string)
+
+
+
 
 
 if __name__ == '__main__':
