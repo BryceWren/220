@@ -222,7 +222,7 @@ def decode():
 def print_file():
     my_file = open('Homework test.py', 'r')
     poem = my_file.read() # data type is string
-    peom = poem.replace("s", "$") # this replaces all s's with $
+    poem = poem.replace("s", "$") # this replaces all s's with $
     print(poem)
     my_file.close()
     #.read() -> str

@@ -12,8 +12,13 @@ I certify that this assignment is my own work, but I discussed it with: <Name(s)
 
 
 def number_words(in_file_name, out_file_name):
-    pass
+    input_file = open("in_file_name", 'r')
+    for i in input_file:
+        file_read = input_file.read()
+        number = i, file_read
+        print(number, end="\n")
 
+number_words()
 
 def hourly_wages(in_file_name, out_file_name):
     pass

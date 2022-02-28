@@ -68,7 +68,6 @@ def encode_better():
 
 
 
-
 if __name__ == '__main__':
     # cash_converter()
     # encode()
