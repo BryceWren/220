@@ -1,18 +1,4 @@
 from graphics import *
-def encode_better():
-    user = input("enter a message:").upper().replace(" ", "")
-    key = input("enter a key:").upper().replace(" ", "")
-    encoded_string = ""
-    for number in range(len(user)):
-        code_character = ord(user[number]) - 65
-        index_key = (number % len(key))
-        key_string = key[index_key]
-        key_number = ord(key_string) - 65
-        difference_value = (code_character + key_number) % 26
-        value_letter = difference_value + 65
-        encoded_string = encoded_string + chr(value_letter)
-    print(encoded_string)
-#encode_better()
 
 def vigenere_cipher():
     win = GraphWin("Encryption Machine", 700, 700)
