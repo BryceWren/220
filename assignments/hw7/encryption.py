@@ -1,6 +1,6 @@
 def encode(message, key):
     user = str(message)
-    key = eval(key)
+    key = (key)
     encoded_string = ""
     for character in user:
         code_character = (ord(character) + key)
@@ -9,8 +9,8 @@ def encode(message, key):
     return encoded_string
 
 def encode_better(message, key):
-    user = input(message)
-    key = input(key)
+    user = message
+    key = key
     encoded_string = ""
     for number in range(len(user)):
         code_character = ord(user[number]) - 65

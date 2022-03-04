@@ -47,7 +47,6 @@ def calc_check_sum(isbn):
         int_user = int(user_join[number])
         absolute_mod = (abs(number + 1 % -11))
         zero += int_user * absolute_mod
-    print("{}".format(zero))
     return zero
 
 
@@ -71,7 +70,7 @@ def send_safe_message(file_name, friend_name, key):
     read_friend_file = file_open.readlines()
     friend_file_output = open(friend_name + ".txt", "w")
     for i in read_friend_file:
-        print(encode(i, key), end="", file=friend_file_output)
+        print(encode(i, key)[:-1], file=friend_file_output)
 
 #send_safe_message("tests/send_message_1_input.txt", "bob", "7")
 
@@ -82,10 +81,10 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
     key_open_file = open(pad_file_name, "r")
     key_read = key_open_file.read()
     friend_file_output = open(friend_name + ".txt", "w")
-    encode = encode_better(read_friend_file, key_read)
-    print(encode, file=friend_file_output)
+    encoded_str = encode_better(read_friend_file, key_read)
+    print(encoded_str, file=friend_file_output)
 
-send_uncrackable_message("tests/send_message_10_input.txt", "bob", "pad.txt")
+#send_uncrackable_message("tests/send_message_10_input.txt", "bob", "pad.txt")
 
 if __name__ == '__main__':
     pass
