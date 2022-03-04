@@ -82,7 +82,8 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
     key_open_file = open(pad_file_name, "r")
     key_read = key_open_file.read()
     friend_file_output = open(friend_name + ".txt", "w")
-    print(encode_better(read_friend_file, key_read), file=friend_file_output)
+    encode = encode_better(read_friend_file, key_read)
+    print(encode, file=friend_file_output)
 
 send_uncrackable_message("tests/send_message_10_input.txt", "bob", "pad.txt")
 
