@@ -62,20 +62,49 @@ def play_graphics(secret_word):
     stand.draw(win)
     slant_stand = Line(Point(375, 100), Point(250, 200))
     slant_stand.draw(win)
-    text_alphabet = Text(Point(600,600), "a,")
+    text_alphabet = Text(Point(350, 20), "a b c d e f g h i j k l m n o p q r s t u v w x y z")
+    text_alphabet.draw(win)
 
     head = Circle(Point(250, 250), 50)
-    head.draw(win)
     torso = Line(Point(250, 300), Point(250, 400))
-    torso.draw(win)
     left_leg = Line(Point(250, 400), Point(200, 500))
-    left_leg.draw(win)
     right_leg = Line(Point(250, 400), Point(200, 550))
-    right_leg.draw(win)
     right_arm = Line(Point(250, 350), Point(300, 350))
-    right_arm.draw(win)
     left_arm = Line(Point(250, 350), Point(200, 350))
-    left_arm.draw(win)
+
+    acc = 7
+    guess_list = []
+    while True:
+        hidden_secret = make_hidden_secret(secret_word, guess_list)
+        text_hidden_word = Text(Point(400, 650), hidden_secret)
+        text_hidden_word.draw(win)
+        user_guess = user_entry.getText()
+        guess_list.append(user_guess)
+        hidden_secret = make_hidden_secret(secret_word, guess_list)
+        if not letter_in_secret_word(user_guess, secret_word) or not already_guessed(user_guess, guess_list):
+            acc = acc - 1
+        if acc == 6:
+            head.draw(win)
+        elif acc == 5:
+            torso.draw(win)
+        elif acc == 4:
+            left_arm.draw(win)
+        elif acc == 3:
+            right_arm.draw(win)
+        elif acc == 2:
+            right_leg.draw(win)
+        elif acc == 1:
+            left_leg.draw(win)
+        attempts = "guesses remaining: {}".format(acc)
+        print("already guessed: {}".format(guess_list))
+        print(attempts)
+        if acc == 0 or won(hidden_secret):
+            break
+    if won(hidden_secret):
+        print("winner!")
+        print(hidden_secret)
+    else:
+        print("i regret to inform you that you have lost. the word was {}".format(secret_word))
 
     win.getMouse()
 
