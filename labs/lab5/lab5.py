@@ -108,7 +108,7 @@ def color_shape():
     win.getMouse()
     win.close()
 
-#color_shape()
+color_shape()
 def process_string():
     x = input("input a string")
     print(x[0])

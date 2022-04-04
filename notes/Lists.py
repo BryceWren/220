@@ -240,4 +240,6 @@ def print_file_list():
         print(line[:-1]) # the splice stops it from printing the new line as its own line
 
 output_file = open('output.txt', 'w') # COULD NUKE FILE IF WRONG FILE NAME IS PLACED
-print("hello world!", file=output_file) # BEWARE THIS COULD RESULT IN DATA LOSS
+print("hello world!", file=output_file) # BEWARE THIS COULD RESULT IN DATA LOSt
+
+# return statements = when you call a return statement it returns the data it stored in the previous function
