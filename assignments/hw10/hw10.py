@@ -20,14 +20,14 @@ def fibonacci(n):
 def double_investment(principle, rate):
     acc = 0
     annual = 0
-    while annual <= (principle):
+    while annual <= principle:
         acc += 1
         annual_intrest = (principle * (1 + rate)) - principle
         annual += annual_intrest
         print(annual)
     return acc
 
-#double_investment(26319, .18)
+#double_investment(26319, .18) # = 5
 
 def syracuse(n):
     my_list = [n]
@@ -40,7 +40,12 @@ def syracuse(n):
             my_list.append(n)
     return my_list
 
-def goldbach(n):
 
-    if n % 2 == 0:
+def goldbach(n):
+    if n % 2 == 0: # only even numbers
+        print("pee")
+    if n % 2 != 0:
+        return None
+
+
 
