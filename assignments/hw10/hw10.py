@@ -22,9 +22,8 @@ def double_investment(principle, rate):
     annual = 0
     while annual <= principle:
         acc += 1
-        annual_intrest = (principle * (1 + rate)) - principle
-        annual += annual_intrest
-        print(annual)
+        annual_interest = (principle * (1 + rate)) - principle
+        annual += annual_interest
     return acc
 
 #double_investment(26319, .18) # = 5
@@ -43,9 +42,11 @@ def syracuse(n):
 
 def goldbach(n):
     if n % 2 == 0: # only even numbers
-        print("pee")
+        print("place holder")
     if n % 2 != 0:
         return None
 
-
+from face import Face
+from graphics import *
+Face.smile()
 

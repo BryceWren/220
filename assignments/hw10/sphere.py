@@ -9,7 +9,7 @@ class Sphere:
         return self.radius
 
     def surface_area(self):
-        return math.pi * self.radius**2
+        return 4 * math.pi * self.radius**2
 
     def volume(self):
         return (4/3)*math.pi * self.radius**3
