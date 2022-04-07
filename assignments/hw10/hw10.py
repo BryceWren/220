@@ -3,6 +3,8 @@ Name: <Bryce Wren>
 Assignment description:
 """
 
+import math
+
 def fibonacci(n):
     n_one = 0
     n_two = 1
@@ -19,17 +21,13 @@ def fibonacci(n):
 
 def double_investment(principle, rate):
     acc = 0
-    #annual = 0
-    final = 0
-    while final <= principle * 2:
+    annual = principle
+    while annual <= principle * 2:
         acc += 1
-        annual = (principle * (1 + rate))
-        final += annual * (1 + rate)
-    print(acc)
+        annual = (annual * (1 + rate))
+    return acc
 
-double_investment(26319, .18) # = 5
 
-# we want to store the principle each time with the investment 1000 - > 1070
 def syracuse(n):
     my_list = [n]
     while n != 1:
@@ -43,27 +41,38 @@ def syracuse(n):
 
 
 def prime(num):
-    if num % 2 == 0:
-        return True
+    n = 2
+    while int(math.sqrt(num)) % n != 0 and n < int(math.sqrt(num)):
+        if int(math.sqrt(num)) % n == 0:
+            return False
+        n += 1
     else:
-        return False
+        return True
 
 
-def goldbach(n):
+def goldbach(num):
     nums = 0
+    i = 0
     my_list = []
-    for i in range(1, n + 1): # while n < nums
-        if prime(i):
+    while nums < num:
+        if prime(nums):
+            my_list.append(nums)
             nums += 1
-            my_list.append(i)
-        for first_num in my_list:
-            for second_num in my_list:
-                x = first_num + second_num
-                if x == n:
-                    return[first_num, second_num]
-    if n % 2 != 0:
+    while True:
+        first_num = my_list[i]
+        second_num = my_list[i + 1]
+        sum_num = first_num + second_num
+        if second_num > len(my_list):
+            break
+        if sum_num == num:
+            break
+        return[first_num, second_num]
+    i += 1
+
+    if num % 2 != 0:
         return None
 
+goldbach(5)
 from face import Face
 from graphics import *
 #Face.smile()
