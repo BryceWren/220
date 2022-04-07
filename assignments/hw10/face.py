@@ -38,6 +38,12 @@ class Face:
         point_3 = self.mouth.move(0, -10)
         self.mouth = Polygon(self.mouth, point_3)
         self.mouth.draw(self.window)
-        self.left_eye.undraw()
         self.left_eye = Line(self.left_eye, 3.0)
         self.left_eye.draw(self.window)
+
+
+#def __init__(self, greeting):
+    #self.greeting = greeting
+
+
+# create an object and store it in a variable

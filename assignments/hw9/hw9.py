@@ -47,6 +47,11 @@ def won(guessed):
             return False
     return True
 
+# open a terminal
+    # won("_h__")
+    # won("hello")
+    # won(h___o)
+
 def change_color(win, letter, alphabet):
     window = win
     for i in alphabet:
@@ -81,12 +86,13 @@ def play_graphics(secret_word):
 
     acc = 7
     guess_list = []
+    text_hidden_word = Text(Point(250, 550), hidden_secret)
+    text_hidden_word.draw(win)
     while True:
         hidden_secret = make_hidden_secret(secret_word, guess_list)
-        text_hidden_word = Text(Point(250, 550), hidden_secret)
-        text_hidden_word.draw(win)
         win.getMouse()
         user_guess = user_entry.getText()
+        text_hidden_word.setText(hidden_secret)
         change_color(win, user_guess, alphabet)
         guess_list.append(user_guess)
         color_change = Text(Point(250, 250), guess_list)
@@ -101,18 +107,18 @@ def play_graphics(secret_word):
             break
         if acc == 7:
             win.getMouse()
-            if acc == 6:
-                head.draw(win)
-                if acc == 5:
-                    torso.draw(win)
-                    if acc == 4:
-                        left_arm.draw(win)
-                        if acc == 3:
-                            right_arm.draw(win)
-                            if acc == 2:
-                                right_leg.draw(win)
-                                if acc == 1:
-                                    left_leg.draw(win)
+        if acc == 6:
+            head.draw(win)
+        if acc == 5:
+            torso.draw(win)
+        if acc == 4:
+            left_arm.draw(win)
+        if acc == 3:
+            right_arm.draw(win)
+        if acc == 2:
+            right_leg.draw(win)
+        if acc == 1:
+            left_leg.draw(win)
     if won(hidden_secret):
         print("winner!")
 
@@ -151,3 +157,10 @@ if __name__ == '__main__':
     pass
     # play_command_line(secret_word)
     # play_graphics(secret_word)
+
+#text object:
+    #text
+    #a = text(Point(3,4), "h")
+    text = "hi"
+    # Set text replaces the original property and changes the value
+

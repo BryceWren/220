@@ -19,15 +19,17 @@ def fibonacci(n):
 
 def double_investment(principle, rate):
     acc = 0
-    annual = 0
-    while annual <= principle:
+    #annual = 0
+    final = 0
+    while final <= principle * 2:
         acc += 1
-        annual_interest = (principle * (1 + rate)) - principle
-        annual += annual_interest
-    return acc
+        annual = (principle * (1 + rate))
+        final += annual * (1 + rate)
+    print(acc)
 
-#double_investment(26319, .18) # = 5
+double_investment(26319, .18) # = 5
 
+# we want to store the principle each time with the investment 1000 - > 1070
 def syracuse(n):
     my_list = [n]
     while n != 1:
@@ -40,13 +42,29 @@ def syracuse(n):
     return my_list
 
 
+def prime(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+
+
 def goldbach(n):
-    if n % 2 == 0: # only even numbers
-        print("place holder")
+    nums = 0
+    my_list = []
+    for i in range(1, n + 1): # while n < nums
+        if prime(i):
+            nums += 1
+            my_list.append(i)
+        for first_num in my_list:
+            for second_num in my_list:
+                x = first_num + second_num
+                if x == n:
+                    return[first_num, second_num]
     if n % 2 != 0:
         return None
 
 from face import Face
 from graphics import *
-Face.smile()
+#Face.smile()
 
