@@ -5,6 +5,7 @@ Assignment description:
 
 import math
 
+
 def fibonacci(n):
     n_one = 0
     n_two = 1
@@ -19,6 +20,7 @@ def fibonacci(n):
             count += 1
         return n_one
 
+
 def double_investment(principle, rate):
     acc = 0
     annual = principle
@@ -28,52 +30,46 @@ def double_investment(principle, rate):
     return acc
 
 
-def syracuse(n):
-    my_list = [n]
-    while n != 1:
-        if n % 2 == 0:
-            n = n/2
-            my_list.append(n)
+def syracuse(number):
+    my_list = [number]
+    while number != 1:
+        if number % 2 == 0:
+            number = number/2
+            my_list.append(number)
         else:
-            n = 3 * n + 1
-            my_list.append(n)
+            number = 3 * number + 1
+            my_list.append(number)
     return my_list
 
 
 def prime(num):
     n = 2
-    while int(math.sqrt(num)) % n != 0 and n < int(math.sqrt(num)):
-        if int(math.sqrt(num)) % n == 0:
+    while n <= math.ceil(math.sqrt(num)):
+        if num % n == 0:
             return False
         n += 1
-    else:
-        return True
+    return True
+
 
 
 def goldbach(num):
     nums = 0
     i = 0
     my_list = []
+    if num % 2 != 0:
+        return None
     while nums < num:
         if prime(nums):
             my_list.append(nums)
-            nums += 1
-    while True:
-        first_num = my_list[i]
-        second_num = my_list[i + 1]
-        sum_num = first_num + second_num
-        if second_num > len(my_list):
-            break
-        if sum_num == num:
-            break
-        return[first_num, second_num]
-    i += 1
+        nums += 1
+    while i < len(my_list):
+        if num - my_list[i] in my_list:
+            return [my_list[i], num - my_list[i]]
+        i += 1
+    return None
 
-    if num % 2 != 0:
-        return None
 
-goldbach(5)
-from face import Face
-from graphics import *
-#Face.smile()
+
+#goldbach(8368)
+
 
