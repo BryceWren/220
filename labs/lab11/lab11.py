@@ -59,7 +59,7 @@ def main():
 
 
         for door in door_list:
-            door.color_door("Red")
+            door.color_door("red")
 
 
         # point = win.getMouse()
