@@ -7,7 +7,17 @@ class SalesForce:
         file = open(file_name, "r")
         read_file = file.readline()
         for line in read_file:
-            individual_line = line.__str__()
-            self.sales_people.append(individual_line)
+            self.sales_people.append(line)
 
     def quota_report(self, quota):
+        pass
+
+    def top_seller(self):
+        pass
+
+    def individual_sales(self, employee_id):
+        pass
+
+    def get_sale_frequencies(self):
+        pass
+
