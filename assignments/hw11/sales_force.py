@@ -26,9 +26,9 @@ class SalesForce:
 
     def top_seller(self):
         my_list = []
-        for emp in self.sales_people:
-            other = emp + 1
-            best_emp = emp.compare_to(other)
+        for emp in range(len(self.sales_people) - 1):
+            other = self.sales_people[emp + 1]
+            best_emp = self.sales_people[emp].compare_to(other)
             if best_emp == 1:
                 best_emp = emp
             my_list.append(best_emp)
@@ -46,13 +46,10 @@ class SalesForce:
                 return None
 
     def get_sale_frequencies(self):
-        my_list = []
-
-        length_of_sale = 0
+        # {total:frequency}
+        my_diction = {}
         for emp in self.sales_people:
-            my_list.append(emp.total_sales())
-            length_of_sale += 1
-        for i in my_list:
-
-
-
+            if emp[2] in my_diction:
+                my_diction[emp[2]] = my_diction[emp[2]] + 1
+            else:
+                my_diction[emp[2]] = 1
