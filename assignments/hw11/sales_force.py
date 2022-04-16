@@ -46,7 +46,13 @@ class SalesForce:
                 return None
 
     def get_sale_frequencies(self):
+        my_list = []
+
+        length_of_sale = 0
         for emp in self.sales_people:
-            emp.total_sales()
+            my_list.append(emp.total_sales())
+            length_of_sale += 1
+        for i in my_list:
+
 
 
