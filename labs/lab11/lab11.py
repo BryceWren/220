@@ -46,7 +46,6 @@ def main():
                 door.color_door("Green")
                 wins += 1
 
-
             elif not door.is_secret() and door.is_clicked(point):
                 door.color_door("Brown")
                 loss += 1
@@ -61,6 +60,7 @@ def main():
         for door in door_list:
             door.color_door("red")
 
+        win.getMouse()
 
         # point = win.getMouse()
         # x = Text("0", Point(50, 50))

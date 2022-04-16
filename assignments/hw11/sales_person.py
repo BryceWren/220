@@ -1,6 +1,6 @@
 class SalesPerson:
     def __init__(self, employee_id, name):
-        self.employee_id = employee_id
+        self.employee_id = int(employee_id)
         self.name = name
         self.sales = []
 
@@ -42,3 +42,4 @@ class SalesPerson:
         return "{} - {} : {}".format(self.get_id,
                                      self.get_name(),
                                      self.get_sales())
+    # when you print an object this is what the string object returns

@@ -25,11 +25,28 @@ class SalesForce:
             my_list.append(whole_list)
 
     def top_seller(self):
-        pass
+        my_list = []
+        for emp in self.sales_people:
+            other = emp + 1
+            best_emp = emp.compare_to(other)
+            if best_emp == 1:
+                best_emp = emp
+            my_list.append(best_emp)
+            if best_emp < 0:
+                best_emp = best_emp
+            if best_emp == 0:
+                my_list.append(best_emp + other)
 
     def individual_sales(self, employee_id):
-        pass
+        for emp in self.sales_people:
+            id_in_person = emp[0]
+            if employee_id == id_in_person:
+                return emp
+            else:
+                return None
 
     def get_sale_frequencies(self):
-        pass
+        for emp in self.sales_people:
+            emp.total_sales()
+
 
