@@ -1,4 +1,6 @@
 from sales_person import SalesPerson
+
+
 class SalesForce:
     def __init__(self):
         self.sales_people = []
@@ -18,11 +20,11 @@ class SalesForce:
     def quota_report(self, quota):
         my_list = []
         for i in self.sales_people:
-            id = i.get_id
+            emp_id = i.get_id
             name = i.get_name
             total_sales = i.total_sales
             quota_met = i.met_quota(quota)
-            whole_list = [id, name, total_sales, quota_met]
+            whole_list = [emp_id, name, total_sales, quota_met]
             my_list.append(whole_list)
         return my_list
 
