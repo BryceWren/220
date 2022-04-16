@@ -13,6 +13,7 @@ class SalesForce:
             sales = line[2].split()
             temp_person.enter_sale(sales)
             self.sales_people.append(temp_person)
+        file.close()
 
     def quota_report(self, quota):
         my_list = []
@@ -23,19 +24,20 @@ class SalesForce:
             quota_met = i.met_quota(quota)
             whole_list = [id, name, total_sales, quota_met]
             my_list.append(whole_list)
+        return my_list
 
     def top_seller(self):
         my_list = []
-        for emp in range(len(self.sales_people) - 1):
-            other = self.sales_people[emp + 1]
-            best_emp = self.sales_people[emp].compare_to(other)
-            if best_emp == 1:
+        best_emp = self.sales_people[0]
+        for emp in self.sales_people:
+            comparison_num = emp.compare_to(best_emp)
+            if comparison_num > 0:
                 best_emp = emp
-            my_list.append(best_emp)
-            if best_emp < 0:
-                best_emp = best_emp
-            if best_emp == 0:
-                my_list.append(best_emp + other)
+                my_list.clear()
+                my_list.append(emp)
+            if comparison_num == 0:
+                my_list.append(best_emp)
+        return my_list
 
     def individual_sales(self, employee_id):
         for emp in self.sales_people:
