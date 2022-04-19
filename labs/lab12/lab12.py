@@ -1,7 +1,7 @@
 """
 Bryce Wren: Lab 12
 """
-
+from random import randint
 
 def find_and_remove_first(the_list, value):
     i = 0
@@ -32,10 +32,22 @@ def num_digits():
     while user_input <= 0:
         if user_input > 0:
             my_list.append(user_input)
-
+        else:
+            eval(input("enter a positive integer"))
 
 num_digits()
 
 def hi_lo_game():
-    pass
-
+    random_num = randint(1, 100)
+    i = 0
+    while i < 7:
+        user_input = eval(input("enter a number 1-100"))
+        if user_input < random_num:
+            print("guess higher")
+        elif user_input > random_num:
+            print("guess lower")
+        elif user_input == random_num:
+            print("congrats you won")
+        i += 1
+    else:
+        print("out of guesses the number was {}".format(random_num))
